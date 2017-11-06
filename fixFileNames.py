@@ -11,7 +11,7 @@ def sortFiles(directory):
     a.sort(key=lambda s: os.path.getmtime(os.path.join(directory, s)))
     return a 
 
-for index,filename in enumerate(sortFiles(directory)):
+for index,filename in enumerate(sortFiles("./")):
 	if filename.endswith(".pdf"): 
 		# remove spaces in name
 		noSpaces = filename.replace(" ","_")
